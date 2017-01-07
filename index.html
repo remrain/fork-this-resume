@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fork This Resume</title>
+        <link href="css/app.css" rel="stylesheet" />
+        <link href="https://assets-cdn.github.com/assets/frameworks-d9cf6df9cdb42232252ecbe5c082ec34480ce2608ed8b1bce76860b9d8293782.css" rel="stylesheet" />
+        <link href="https://assets-cdn.github.com/assets/github-2b75de550f4a266dccc546fdde62adb64e2abed0ace9c5adfa9f58135c50a359.css" rel="stylesheet" />
+    </head>
+
+    <body ng-controller="AppCtrl">
+        <div class="page">
+            <div class="preview-page">
+				<div class="main-content">
+					<div class="container new-discussion-timeline experiment-repo-nav">
+						<div class="repository-content">
+							<div class="readme boxed-group clearfix announce instapaper_body md">
+								<article class="markdown-body entry-content">
+                                    <div sd-model-to-html="text"></div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-sanitize.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-resource.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/showdown/1.5.5/showdown.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ng-showdown/1.1.0/ng-showdown.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
+
