@@ -1,3 +1,42 @@
 .preview-page {
     margin-top: 64px;
 }
+.do-fork {
+    width:890px;
+    height: 300px;
+    margin-right:auto;
+    margin-left:auto;
+    position:absolute;
+    top:0px;
+    opacity: 0;
+    transition: 0.2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+}
+.do-fork:hover {
+    opacity: 1;
+}
+
+.do-fork .btn {
+    float: right !important;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.do-preview {
+    width: 890px;
+}
+
+.do-preview .btn {
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:20px;
+    display:block;
+}
+
+.edit-area {
+    min-height:460px !important;
+    height:auto;
+    resize:none;
+    overflow-y:visible !important;
+}

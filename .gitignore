@@ -1,0 +1,10 @@
+/node_modules
+/bower_components
+tags
+*.swp
+*.swo
+/.settings
+/.buildpath
+/.project
+.DS_Store
+.idea

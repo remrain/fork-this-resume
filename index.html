@@ -14,10 +14,19 @@
 				<div class="main-content">
 					<div class="container new-discussion-timeline experiment-repo-nav">
 						<div class="repository-content">
-							<div class="readme boxed-group clearfix announce instapaper_body md">
+							<div ng-show="!editing" class="readme boxed-group clearfix announce instapaper_body md">
 								<article class="markdown-body entry-content">
-                                    <div sd-model-to-html="text"></div>
+                                    <div class="do-fork">
+                                        <button ng-click="doEdit()" class="btn btn-sm">edit</button>
+                                    </div>
+
+                                    <div ng-show="!editing" sd-model-to-html="text"></div>
+
                                 </article>
+                            </div>
+                            <div ng-show="editing" class="do-preview">
+                                <textarea ng-model="text" class="form-control input-block edit-area"></textarea>
+                                <button ng-click="doPreview()" class="btn btn-sm">done</button>
                             </div>
                         </div>
                     </div>
