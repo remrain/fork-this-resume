@@ -1,7 +1,7 @@
 angular.module('app', ['ngSanitize', 'ng-showdown', 'ngResource']);
 angular.module('app').controller('AppCtrl', ['$scope', '$http', function ($scope, $http) {
     $scope.text = '';
-    $scope.editing = true;
+    $scope.editing = false;
     $scope.doEdit = function () {
         $scope.editing = true;
     };
