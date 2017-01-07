@@ -1,3 +1,4 @@
-# fork-this-resume
-Fork and generate your own resume
-[TRY NOW!](https://remrain.github.io/fork-this-resume/)
+# Fork This Resume
+Fork and generate your own resume. [demo](https://remrain.github.io/fork-this-resume/)
+
+[Try now!](https://remrain.github.io/fork-this-resume/)
