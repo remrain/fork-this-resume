@@ -20,18 +20,24 @@
 .do-fork .btn {
     float: right !important;
     margin-top: 20px;
-    margin-left: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .do-preview {
-    width: 890px;
+    width: 980px;
 }
 
 .do-preview .btn {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.do-preview .operation {
     margin-left:auto;
     margin-right:auto;
     margin-top:20px;
-    display:block;
+    display:table;
 }
 
 .edit-area {

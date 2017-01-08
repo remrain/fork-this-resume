@@ -1,17 +1,32 @@
-angular.module('app', ['ngSanitize', 'ng-showdown', 'ngResource', 'appStorage']);
-angular.module('app').controller('AppCtrl', ['$scope', '$http', 'Storage', function ($scope, $http, Storage) {
+angular.module('app').controller('AppCtrl', ['$scope', '$stateParams', '$state', 'Storage', function ($scope, $stateParams, $state, Storage) {
+    console.log('AppCtrl enter');
+    console.log($stateParams.id);
+
     $scope.text = '';
-    $scope.editing = false;
+    $scope.editing = ($stateParams.action == 'fork') ? true : false;
+    $scope.preview = false;
+
+    if ($stateParams.id) {
+        $scope.id = $stateParams.id;
+        Storage.fetchResume($stateParams.id, function (text) {
+            $scope.text = text;
+        });
+    }
+
     $scope.doEdit = function () {
         $scope.editing = true;
     };
+
     $scope.doPreview = function () {
         $scope.editing = false;
-        Storage.saveResume($scope.text, '', function (id) {
-            console.log('new id:', id);
-        });
+        $scope.preview = true;
     };
-    $http.get('data/sample.md').then(function (res) {
-        $scope.text = res.data;
-    })
+
+    $scope.doSave = function () {
+        Storage.saveResume($scope.text, $scope.id, function (id) {
+            $state.go('show', {id: id});
+        }, function (err) {
+            alert('Save failed: ' + err.message);
+        });
+    }
 }])

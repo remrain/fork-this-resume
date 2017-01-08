@@ -11,40 +11,18 @@
         <link href="https://assets-cdn.github.com/assets/github-2b75de550f4a266dccc546fdde62adb64e2abed0ace9c5adfa9f58135c50a359.css" rel="stylesheet" />
     </head>
 
-    <body ng-controller="AppCtrl">
-        <div class="page">
-            <div class="preview-page">
-				<div class="main-content">
-					<div class="container">
-						<div class="repository-content">
-							<div ng-show="!editing" class="readme boxed-group clearfix announce instapaper_body md">
-								<article class="markdown-body entry-content">
-                                    <div class="do-fork">
-                                        <button ng-click="doEdit()" class="btn btn-sm">edit</button>
-                                    </div>
-
-                                    <div ng-show="!editing" markdown-to-html="text"></div>
-
-                                </article>
-                            </div>
-                            <div ng-show="editing" class="do-preview">
-                                <textarea ng-model="text" class="form-control input-block edit-area"></textarea>
-                                <button ng-click="doPreview()" class="btn btn-sm">done</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-sanitize.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-resource.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/showdown/1.5.5/showdown.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ng-showdown/1.1.0/ng-showdown.min.js"></script>
-        <script src="//cdn1.lncld.net/static/js/av-min-1.5.3.js"></script>
-        <script src="js/service/storage.js"></script>
-        <script src="js/controller/app.js"></script>
+    <body ng-controller="SiteCtrl">
+        <div ui-view></div>
+        <script>
+/**
+ * sample used in js/service/storage.js
+ */
+var sample = {
+    'sample': 'data/sample_en.md',
+    'sample-cn': 'data/sample.md',
+};
+        </script>
+        <script src="js/config.js"></script>
     </body>
 </html>
 

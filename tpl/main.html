@@ -1,0 +1,29 @@
+<div class="page">
+    <div class="preview-page">
+        <div class="main-content">
+            <div class="container">
+                <div class="repository-content">
+                    <div ng-show="!editing" class="readme boxed-group clearfix announce instapaper_body md">
+                        <article class="markdown-body entry-content">
+                            <div class="do-fork">
+                                <button ng-show="preview" ng-click="doSave()" class="btn btn-sm">publish</button>
+                                <button ng-show="preview" ng-click="doEdit()" class="btn btn-sm">edit</button>
+                                <button ng-show="!editing && !preview" ui-sref="fork({id:id})" class="btn btn-sm">fork</button>
+                            </div>
+
+                            <div ng-show="!editing" markdown-to-html="text"></div>
+
+                        </article>
+                    </div>
+                    <div ng-show="editing" class="do-preview">
+                        <textarea ng-model="text" class="form-control input-block edit-area"></textarea>
+                        <div class="operation">
+                            <button ng-click="doPreview()" class="btn btn-sm">preview</button>
+                            <button ng-click="doSave()" class="btn btn-sm">publish</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
