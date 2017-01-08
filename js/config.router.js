@@ -9,7 +9,7 @@
         $urlRouterProvider.otherwise(function($injector, $location) {
             var $state = $injector.get("$state");
             // $state.go('show', {id: '5871da001b69e6005cd8302b'});
-            $state.go('show', {id: 'sample'});
+            $state.go('show', {id: 'readme'});
         });
 
         $stateProvider

@@ -3,7 +3,7 @@
 }
 .do-fork {
     width:890px;
-    height: 300px;
+    height: 135px;
     margin-right:auto;
     margin-left:auto;
     position:absolute;
@@ -45,6 +45,10 @@
     height:auto;
     resize:none;
     overflow-y:visible !important;
+}
+
+.repository-content a {
+    cursor: auto !important;
 }
 
 /*

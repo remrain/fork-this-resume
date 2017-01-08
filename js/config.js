@@ -11,7 +11,6 @@
             "//cdn1.lncld.net/static/js/av-min-1.5.3.js",
             "js/service/storage.js",
             "js/config.router.js"
-            // "js/controller/app.js"
         ],
         cn: [
             "//cdn.bootcss.com/angular.js/1.6.1/angular.min.js",
@@ -24,7 +23,6 @@
             "//cdn1.lncld.net/static/js/av-min-1.5.3.js",
             "js/service/storage.js",
             "js/config.router.js"
-            // "js/controller/app.js"
         ]
     };
     var conf = "cn";
