@@ -7,15 +7,15 @@ angular.module('appStorage', []).run(function () {
         appId: 'cYYk9SnunWnRtHP1D9hOBy45-gzGzoHsz',
         appKey: 'LYspC2VPwYwls4ygbGgsDDKj'
     });
-}).service('Storage', ['$rootScope', function ($rootScope) {
+}).service('Storage', ['$timeout', function ($timeout) {
     this.fetchResume = function (id, successCallback, failureCallback) {
         AV.Object.createWithoutData('Resume', id).fetch().then(function (data) {
-            $rootScope.$apply(function () {
+            $timeout(function () {
                 successCallback(data.get('content'));
             });
         }, function (err) {
             if (failureCallback) {
-                $rootScope.$apply(function () {
+                $timeout(function () {
                     failureCallback(err);
                 });
             }
@@ -27,12 +27,12 @@ angular.module('appStorage', []).run(function () {
         resume.set('content', content);
         resume.set('ref', ref);
         resume.save().then(function (resume) {
-            $rootScope.$apply(function () {
+            $timeout(function () {
                 successCallback(resume.id);
             });
         }, function (err) {
             if (failureCallback) {
-                $rootScope.$apply(function () {
+                $timeout(function () {
                     failureCallback(err);
                 });
             }
