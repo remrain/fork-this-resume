@@ -17,3 +17,6 @@ You can convert web pages to PDF from popular browsers like Internet Explorer, F
  * Convert a web page to PDF from Google Chrome on MacOS:
      - Click **File** - **Print...** (or press ⌘+P)
      - Choose **Open PDF in Preview**
+
+# License
+Apache Licence 2.0
